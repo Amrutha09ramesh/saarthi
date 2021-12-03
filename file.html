@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body>
+    <Button onClick={handleClick}>
+        Upload a file
+      </Button>
+      <input type="file" style={{display:'none'}} />
+      <audio id="audio">
+        <source src="" id="thesource" />
+    </audio>
+    <input type="file" id="upload" title="Upload File" />
+    <function handleFiles(event) {
+        var files = event.target.files;
+        $("#src").attr("src", URL.createObjectURL(files[0]));
+        document.getElementById("audio").load();
+    }
+    
+    document.getElementById("upload").addEventListener("change", handleFiles, false);></function>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <input type="file" id="upload" />
+    <audio id="audio" controls>
+      <source src="" id="src" />
+    </audio>
+    <script type="text/javascript" src="path-to javascript-react.js"></script>
+</body>
+</head>
